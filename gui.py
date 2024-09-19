@@ -19,4 +19,8 @@ class guiFream(wx.Frame):
         self.button = wx.Button(panel, label = "Create Password")
 
     def buttonTriggered(self, panel):
+        num = self.text_ctrl.GetValue()
+        self.clicked = True
+        if (num.isnumeric() == True):
+
         
