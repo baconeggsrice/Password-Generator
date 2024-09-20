@@ -22,5 +22,11 @@ class guiFream(wx.Frame):
         num = self.text_ctrl.GetValue()
         self.clicked = True
         if (num.isnumeric() == True):
-
+            num = int(num)
+            password.generate(num)
+        else:
+            wx.CallLater(1000, self.showError)
         
+    def showError(self):
+        wx.MessageBox("Error, Not a number. Please Enter a whole number.", 'Error', wx.OK | wx.ICON_INFORMATION)
+    
