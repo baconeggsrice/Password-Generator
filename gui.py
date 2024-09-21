@@ -1,8 +1,9 @@
 import password
 import wx
 
-class guiFream(wx.Frame):
+class guiFrame(wx.Frame):
     def __init__(self, *args, **kwargs):
+        super(guiFrame, self).__init__(*args,**kwargs)
         panel = wx.Panel(self)
         self.InitUI(panel)
         self.label = wx.StaticText(panel, label = "Choose a password length: ", pos = (15,15))
