@@ -31,3 +31,13 @@ class guiFrame(wx.Frame):
     def showError(self):
         wx.MessageBox("Error, Not a number. Please Enter a whole number.", 'Error', wx.OK | wx.ICON_INFORMATION)
     
+
+def main():
+    app = wx.App()
+    frame = guiFrame(None)
+    frame.Show()
+    app.MainLoop()
+
+if __name__ == '__main__':
+    main()
+    
